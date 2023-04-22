@@ -16,7 +16,17 @@ console.log(maxWithReduce([-2, -3, -7, 3])); // 3
 
 let maxWithReduce = function(nums) {
     // Your code here
+    const value = nums.reduce((acc, num) => {
+
+      if (acc < num) {acc = num}
+
+      return acc
+    });
+  return value
 };
+
+console.log(maxWithReduce([4, 6, 3, 5, 42, 4])); // 42
+console.log(maxWithReduce([-2, -3, -7, 3])); // 3
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
